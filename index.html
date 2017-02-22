@@ -244,51 +244,81 @@
                 opacity: 1;
             }
         }
+
+        body {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+        }
+
+        #bgvid {
+            position: absolute;
+            /*top: 0;*/
+            /*left: 0;*/
+            /*bottom: 0;*/
+            /*right: 0;*/
+            width: 100%;
+            height: 100%;
+            z-index: 8;
+            opacity: 0.7;
+        }
+
+        #mainDiv {
+            position: absolute;
+            top: 3%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            z-index: 9;
+        }
+
+        #content {
+            width: 100%;
+        }
+
+        #code {
+            background: #ffe;
+            opacity: 0.3;
+        }
+
+        #words {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
+<video autoplay loop poster="http://7xqytu.com1.z0.glb.clouddn.com/sakura.png" id="bgvid">
+    <source src="http://7xqytu.com1.z0.glb.clouddn.com/sakura.webm" type="video/webm">
+</video>
 <div id="mainDiv">
     <div id="content">
         <div id="code">
             <span class="comments">/**</span><br/>
-            <span class="space"/><span class="comments">*I am always here to wait for you.</span><br/>
-            <span class="space"/><span class="comments">*And now,please listen to me...</span><br/>
+            <span class="space"/><span class="comments">* 我已认定你就是我一直在等的人。</span><br/>
+            <span class="space"/><span class="comments">* 有些话，对于我而言总是很难说出口，所以借用这种方式来表达。</span><br/>
             <span class="space"/><span class="comments">*/</span><br/>
-            Boy I = <span class="keyword">new</span> Boy(<span class="string">"L.Z.Q"</span>);<br/>
-            Girl U = <span class="keyword">new</span> Girl(<span class="string">"W.H.O.?"</span>);<br/>
-            <span class="comments">//My heart wanders in the world until ...</span><br/>
-            I.love(U);<span class="comments">//the day I meet you.</span>
+            <span class="comments">// 希望你能够接受...</span><br/>
+            I.love(U);<span class="comments">// 从我们在一起的那一天起，</span>
             <br/>
-            <span class="comments">//This is what I want to say for you... </span><br/>
-
-            Since the day I met you,I know you are the girl in my dream.<br/>
-            Fall in love with you and miss you.<br/>
-            Please to be my girlfriend and then my wife.</br/>
-            Give me a chance to:<br/>
-            　　Bring happy to your life<br/>
-            　　Take care of you<br/>
-            　　Together through the life<br/>
-            　　...<br/>
-            <span class="keyword">If </span> YOU ARE IN <span class="keyword">HESITATION</span>;<br/>
-            <span class="keyword">　　I goto Wait;</span> <br/>else <span class="keyword"><br/>　　I goto Love;</span><br/>
-
-            <br/>:Wait<br/>
-            do<br/>
-            {<br/>
-            　　if(true==you.response) goto:Love;<br/>
-            }while(time_goes);<br/>
-
+            <span class="comments">// 我一直都没有对你讲过这三个字。。。 </span><br/>
+            但我心里知道，<span class="keyword">我是爱你的</span>。<br/>
             <br/>
-            :Love<br/>
-            bool love = true;<br/>
-            while(love)<br/>
-            {<br/>
-            　　for(everyday in every year)<br/>
-            　　{<br/>
-            　　　　Guard my sweetheart W.H.O.? in all my efforts</br/>
-            　　}<br/>
-            <br/>}<br/>
-            I hope, forever!<br/>
+                我是一个木讷的程序猿 + 死宅，<br/>
+                不善于表达，平时也总是忙于工作，总是对你有所忽视。</br/>
+            但请你相信：<br/>
+                我一定会把我所有最好的给你！<br/><br/>
+                希望你不要有顾虑，<br>
+                    能够<span class="keyword">快乐</span>地享受以后每一天的生活！<br/>
+            <br/>  目前的我依然还有 <span class="keyword">梦想</span>，<br/>
+            渴望 能通过努力 <span class="keyword">到更高的地方</span><br/>　 去看一看。。
+            <br/><br/>
+                等将来一切<span class="keyword">繁华退却</span>后，<br/>
+                  我希望<br/>
+              我们依然能够<span class="keyword">不离不弃，携手走过以后的人生！</span><br/>
         </div>
         <div id="loveHeart">
             <canvas id="garden"></canvas>
@@ -297,14 +327,11 @@
                     <div id="elapseClock"></div>
                 </div>
                 <div id="loveu">
-                    Love You Forever<br/>W.H.O.?<br/>
+                    Love You Forever<br/>X.Y.X<br/>
                     <div class="signature"></div>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="copyright">
-        Copyright © 2017 <a href='http://xuyuanxiang.me/' target="_blank">Chaos</a>
     </div>
 </div>
 <script type="text/javascript">
@@ -320,7 +347,7 @@
     if (!document.createElement('canvas').getContext) {
         var msg = document.createElement("div");
         msg.id = "errorMsg";
-        msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+        msg.innerHTML = "亲！你的浏览器太老了，<a href='http://browsehappy.com/'>戳这里</a>换个浏览器吧，不好意思。。";
         document.body.appendChild(msg);
         $("#code").css("display", "none")
         $("#copyright").css("position", "absolute");
